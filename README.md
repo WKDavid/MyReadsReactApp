@@ -21,7 +21,7 @@ I've coded and designed the project from the scratch. Backend server and `BooksA
 + Smooth flow and elegance are ought to create a perfect user experience.
 
 ## Installation and use:
-+ Please clone the repository <https://github.com/WKDavid/MyReadsReactApp.git> or [download the project](https://github.com/WKDavid/ArcadeGame/archive/master.zip)
++ Please clone the repository <https://github.com/WKDavid/MyReadsReactApp.git> or [download the project](https://github.com/WKDavid/MyReadsReactApp/archive/master.zip)
 + In your terminal please change your current working directory to the one, containing the application.
 + Please use the command `npm install` to install all the needed dependencies and `npm start` to view the application in your browser.
 + Have fun and enjoy.
