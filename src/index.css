@@ -1,0 +1,219 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, Helvetica, Arial;
+}
+
+h1, .mainHeader {
+  width: 100%;
+  color: #ffffff;
+  background-color: #3127ee;
+  text-align: center;
+  margin: 0;
+  animation-name: colorGlow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.shelves {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1.5vw;
+}
+
+@keyframes backgroundEthereal {
+  from {
+      background-position: 0 0
+  }
+  to {
+      background-position: 100% 0
+  }
+}
+
+.shelfName {
+  font-size: calc(22px + (48 - 22) * ((100vw - 300px) / (1600 - 300)));
+  font-family: Georgia, Helvetica, Arial;
+  font-weight: bold;
+  margin: 1vw;
+  background:url('./images/wood.jpg');
+  background-repeat:repeat-x;
+  background-position:0 0;
+  color:transparent;
+  -webkit-font-smoothing:antialiased;
+  -webkit-background-clip:text;
+  -moz-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: backgroundEthereal 15s linear infinite;
+}
+
+.back-to-main {
+  margin: 1vw;
+  display: block;
+  cursor: pointer;
+  width: 4vw;
+  height: 4vw;
+  background-image: url('./images/goBack.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 4vw;
+  font-size: 0;
+}
+
+.searchButton {
+  margin: 1vw;
+  margin-left: 55vw;
+  display: block;
+  cursor: pointer;
+  width: 4vw;
+  height: 4vw;
+  background-image: url('./images/search.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 4vw;
+  font-size: 0;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.searchBar {
+  background: transparent;
+  animation-name: borderGlow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  color: white;
+  width: 100%;
+  height: 4vw;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  font-family: Georgia, Helvetica, Arial;
+  font-size: 2.5vw;
+}
+
+.searchResults {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bookItem, li {
+  width: 25vw;
+  margin: 1.5vw;
+  list-style: outside none none;
+  border: 2px groove #015b7c;
+  border-radius: 5px;
+  text-align: center;
+  animation-name: borderGlow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.shelf-item, li {
+  width: 12vw;
+}
+
+@keyframes borderGlow {
+  0%  {border-color: #015b7c;}
+  50%  {border-color: #00ffe0;}
+  100%  {border-color: #015b7c;}
+}
+
+@keyframes colorGlow {
+    0%   {background-color:#097aff;}
+    25%  {background-color:#0ed4ff;}
+    50%  {background-color:#ff8a01;}
+    75%  {background-color:#0e1105;}
+    100% {background-color:#097aff;}
+}
+
+.book-shelf-thumb, .book-thumb {
+  width: 80%;
+}
+
+.select-box, select {
+  font-size: calc(9px + (14 - 9) * ((100vw - 300px) / (1600 - 300)));
+  height: 5vh;
+  width: 97%;
+  color: white;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+select option {
+  background-color: black;
+}
+
+select:active, select:hover, select:focus {
+  outline: none;
+}
+
+option:checked {
+  color: #0ed4ff;
+}
+
+p {
+  color: #0ed4ff;
+  font-size: calc(9px + (15 - 9) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.nothing-container {
+  padding-top: 15%;
+  text-align: center;
+  width: 100%;
+}
+
+.nothing {
+  max-width: 500px;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+
+  .searchButton {
+    width: 9vw;
+    height: 9vw;
+    background-size: 9vw;
+  }
+
+  .back-to-main {
+    width: 8vw;
+    height: 9vw;
+    background-size: 7vw;
+  }
+
+  .searchBar {
+    height: 10vw;
+    font-size: 5.5vw;
+
+  }
+
+  .nothing-container {
+    padding-top: 25%;
+  }
+
+  .shelf-item, li {
+    width: 39vw;
+  }
+}
